@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  roles:
+          - name: geerlingguy.jenkins
+            jenkins_package_state: present
+            jenkins_hostname: vkr-jenkins
+            jenkins_http_port: 8080
+            jenkins_admin_username: admin
+            jenkins_admin_password: admin
+            jenkins_plugins_install_dependencies: true
+
+
