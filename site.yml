@@ -7,6 +7,19 @@
             jenkins_http_port: 8080
             jenkins_admin_username: admin
             jenkins_admin_password: admin
+            jenkins_plugins:
+                    - "SSH Slaves"
+                    - "Pipeline"
+                    - "Packer"
+                    - "GitHub Authentication"
+                    - "Gravatar"
+                    - "LDAP"
+                    - "Ansible"
+                    - "Chroot"
+                    - "Python"
+                    - "Docker"
+                    - "Docker Pipeline"
+
             jenkins_plugins_install_dependencies: true
 
   tasks:
