@@ -33,3 +33,10 @@
                     job: "ansible-pull -d /etc/ansible/jenkins/ -U https://github.com/krumstein/jenkins-tf.git site.yml >> /var/log/ansible-pull.log"
 
 
+  tasks:
+          - name: Install required packages
+            yum:
+                    name: "{{ name }}"
+                    state: installed
+            with_items:
+                    - "maven"
