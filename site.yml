@@ -36,7 +36,7 @@
   tasks:
           - name: Install required packages
             yum:
-                    name: "{{ name }}"
+                    name: "{{ item }}"
                     state: installed
             with_items:
                     - "maven"
