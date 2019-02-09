@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: vkr-jenkins
   roles:
           - name: geerlingguy.jenkins
             jenkins_package_state: present
@@ -8,5 +8,12 @@
             jenkins_admin_username: admin
             jenkins_admin_password: admin
             jenkins_plugins_install_dependencies: true
+
+  tasks:
+          - name: Add ansible-pull
+            cron:
+                    name: Run ansible-pull site.yml
+                    minute: "*/5"
+                    job: "ansible-pull -d /etc/ansible/jenkins/ -U https://github.com/krumstein/jenkins-tf.git site.yml"
 
 
