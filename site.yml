@@ -19,6 +19,7 @@
                     - "Python"
                     - "Docker"
                     - "Docker Pipeline"
+                    - "Configuration as Code"
 
             jenkins_plugins_install_dependencies: true
 
