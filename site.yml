@@ -57,6 +57,8 @@
                     groups: 
                     - docker
                     - wheel
+                    - jenkins
             with_items:
                     - vkr
                     - jenkins
+            notify: restart jenkins
