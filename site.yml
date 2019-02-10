@@ -54,7 +54,9 @@
           - name: Add users to docker group
             user:
                     name: "{{ item }}"
-                    groups: docker
+                    groups: 
+                    - docker
+                    - wheel
             with_items:
                     - vkr
                     - jenkins
