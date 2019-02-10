@@ -41,3 +41,8 @@
             with_items:
                     - "maven"
                     - "docker"
+          - name: Start and enable docker
+            service:
+                    name: "docker"
+                    state: started
+                    enable: yes
