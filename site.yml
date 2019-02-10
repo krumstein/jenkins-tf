@@ -40,3 +40,4 @@
                     state: installed
             with_items:
                     - "maven"
+                    - "docker"
